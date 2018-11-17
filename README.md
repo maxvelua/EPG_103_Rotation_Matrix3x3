@@ -9,6 +9,6 @@ Operator * (Matrix*Vector3) - for multiplication Matrix3x3 and Vector3 return Ve
 ```
 ### PlayerBehaviour script
 Need for mirror the behaviour <br />
-Script gets an object for mirror, then in Update function gets his rotation in Euler angles to Vector3 and convert Vector3 usign matrix Euler function, then create a final matrix which consist with multiplication rotation matrices using Euler angles y,x,z and axis y,x,z and writes the multiplication of this matrix and Vector3.forward to transform.forward and multiplication with Vector3.up to transform.up
+Script gets an object for mirror, then in Update function gets his rotation in Euler angles to Vector3 and convert Vector3 using matrix Euler function, then create a final matrix which consist with multiplication rotation matrices using Euler angles y,x,z and axis y,x,z and writes the multiplication of this matrix and Vector3.forward to transform.forward and multiplication with Vector3.up to transform.up
 
 
