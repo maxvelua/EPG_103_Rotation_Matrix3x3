@@ -2,12 +2,9 @@
 Using Matrix 3x3 and Euler angels
 ## Realize structure Matrix3x3 with functions: <br />
 <ul>
-<li>Rotate</li>
-<li>Euler</li>
-<li>operator * (Matrix*Matrix)</li>
-<li>operator * (Matrix*Vector3)</li>
+<li>Rotate - using angle in degres and axis(x,y,z) return Matrix3x3</li>
+<li>Euler - converts euler angles to a rotation matrix return Matrix3x3</li>
+<li>operator * (Matrix*Matrix) - for multiplication Matrix3x3 return Matrix3x3</li>
+<li>operator * (Matrix*Vector3) - for multiplication Matrix3x3 and Vector3 return Vector3</li>
 </ul>
-1.Rotate a Matrix using angle in degres and axis(x,y,z) return Matrix <br /> 
-2.Euler converts euler angles to a rotation matrix return Matrix <br />
-3.Multiplication operator for matrix*matrix return Matrix <br />
-4.Multiplication operator for matrix*vector3 return Vector3 <br />
+
