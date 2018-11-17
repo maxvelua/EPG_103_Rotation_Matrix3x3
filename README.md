@@ -1,4 +1,4 @@
-# EPG_103_Rotation_Matrix3x3
+# Object mirror the behaviour of another object
 Realize structure Matrix3x3 with functions: <br />
 <ul>
 <li>Rotate</li>
