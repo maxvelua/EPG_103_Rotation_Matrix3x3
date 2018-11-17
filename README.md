@@ -1,4 +1,4 @@
-# Object mirror the behaviour of another object
+# One object mirror the behaviour of another object
 Realize structure Matrix3x3 with functions: <br />
 <ul>
 <li>Rotate</li>
