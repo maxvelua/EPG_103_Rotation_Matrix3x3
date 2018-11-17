@@ -1,5 +1,5 @@
 # One object mirror the behaviour of another object
-Using Matrix 3x3 and Euler angels to mirror the behaviour
+Using Matrix 3x3 and Euler angels
 ## Realize structure Matrix3x3 with functions: <br />
 <ul>
 <li>Rotate</li>
