@@ -4,8 +4,8 @@ Using Matrix 3x3 and Euler angels
 ```
 Rotate - using angle in degres and axis(x,y,z) return Matrix3x3
 Euler - converts Euler angles to a rotation matrix return Matrix3x3
-operator * (Matrix*Matrix) - for multiplication Matrix3x3 return Matrix3x3
-operator * (Matrix*Vector3) - for multiplication Matrix3x3 and Vector3 return Vector3
+Operator * (Matrix*Matrix) - for multiplication Matrix3x3 return Matrix3x3
+Operator * (Matrix*Vector3) - for multiplication Matrix3x3 and Vector3 return Vector3
 ```
 ### PlayerBehaviour script
 Need for mirror the behaviour <br />
