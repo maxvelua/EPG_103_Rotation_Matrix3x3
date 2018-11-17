@@ -1,6 +1,6 @@
 # One object mirror the behaviour of another object
 Using Matrix 3x3 and Euler angels
-## Realize structure Matrix3x3 with functions: <br />
+## Realize structure Matrix3x3 with functions: 
 <ul>
 <li>Rotate - using angle in degres and axis(x,y,z) return Matrix3x3</li>
 <li>Euler - converts Euler angles to a rotation matrix return Matrix3x3</li>
