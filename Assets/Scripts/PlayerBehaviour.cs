@@ -26,7 +26,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
 		matrixEuler = matrixEuler.Euler(euler);
 
-		matrixEuler = matrixEuler.Rotate(euler.y, "y") *  matrixEuler.Rotate(euler.x, "x") * matrixEuler.Rotate(euler.z, "z");
+		matrixEuler = matrixEuler.Rotate(euler.y, Matrix3x3.AxisId.y) *  matrixEuler.Rotate(euler.x,  Matrix3x3.AxisId.x) * matrixEuler.Rotate(euler.z,  Matrix3x3.AxisId.z);
 
 		transform.forward = matrixEuler * Vector3.forward;
 		transform.up = matrixEuler * Vector3.up;

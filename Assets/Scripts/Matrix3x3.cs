@@ -4,6 +4,13 @@ using UnityEngine;
 
 public struct Matrix3x3
 {
+
+    public enum AxisId
+    {
+        x, y, z
+    };
+
+
     public float m00, m01, m02;
     public float m10, m11, m12;
     public float m20, m21, m22;
@@ -23,15 +30,10 @@ public struct Matrix3x3
         this.m22 = m22;
     }
 
-    enum AxisId
-    {
-        x, y, z
-    };
-
-    static Matrix3x3 Rotate(float angleInDeg, AxisId axisId) // enum AxisId axisId ????????
+	public Matrix3x3 Rotate(float angleInDeg,  AxisId axis) 
     {
         float angleInRad = Mathf.Deg2Rad * angleInDeg;
-        switch (axisId)
+        switch (axis)
         {
             case AxisId.x:
                 return new Matrix3x3(1, 0, 0,
@@ -53,34 +55,8 @@ public struct Matrix3x3
 
         return new Matrix3x3(0, 0, 0, 0, 0, 0, 0, 0, 0);
     }
-
-	public Matrix3x3 Rotate(float angleInDeg, string axisId) // enum AxisId axisId ???????? static
-    {
-        float angleInRad = Mathf.Deg2Rad * angleInDeg;
-        switch (axisId)
-        {
-            case "x":
-                return new Matrix3x3(1, 0, 0,
-                                     0, Mathf.Cos(angleInRad), Mathf.Sin(angleInRad) * -1,
-                                     0, Mathf.Sin(angleInRad), Mathf.Cos(angleInRad)
-                                     );
-
-            case "y":
-                return new Matrix3x3(Mathf.Cos(angleInRad), 0, Mathf.Sin(angleInRad),
-                                     0, 1, 0,
-                                     Mathf.Sin(angleInRad) * -1, 0, Mathf.Cos(angleInRad)
-                                     );
-
-            case "z":
-                return new Matrix3x3(Mathf.Cos(angleInRad), Mathf.Sin(angleInRad) * -1, 0,
-                                     Mathf.Sin(angleInRad), Mathf.Cos(angleInRad), 0,
-                                     0, 0, 1);
-        }
-
-        return new Matrix3x3(0, 0, 0, 0, 0, 0, 0, 0, 0);
-    }
    
-    public Matrix3x3 Euler(Vector3 eulerAngles) // static
+    public Matrix3x3 Euler(Vector3 eulerAngles)
     {
         Matrix3x3 R_x = new Matrix3x3(1, 0, 0,
                                       0, Mathf.Cos(eulerAngles.x), Mathf.Sin(eulerAngles.x) * -1,
@@ -96,7 +72,7 @@ public struct Matrix3x3
                                       Mathf.Sin(eulerAngles.z), Mathf.Cos(eulerAngles.z), 0,
                                       0, 0, 1);
 
-        Matrix3x3 R = R_x * R_y * R_z;
+        Matrix3x3 R =  R_y * R_x * R_z;
 
         return R;
     }
